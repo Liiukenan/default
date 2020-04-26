@@ -3,12 +3,26 @@ module.exports = {
   env: {
     node: true
   },
-  extends: ["plugin:vue/essential", "@vue/prettier"],
-  rules: {
-    "no-console": process.env.NODE_ENV === "production" ? "error" : "off",
-    "no-debugger": process.env.NODE_ENV === "production" ? "error" : "off"
+  'globals':{
+    "clientWindow":true,
+    "":true,
+    "showIncentiveVideoAd":true,
+    "shareWechatMoments":true,
+    "getUserToken":true
   },
+  'extends': [
+    'plugin:vue/essential',
+    'eslint:recommended'
+  ],
+  rules: {
+    'no-console': 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    "no-unused-vars": 'off',
+    "vue/no-unused-components": "off"
+
+  },
+
   parserOptions: {
-    parser: "babel-eslint"
+    parser: 'babel-eslint'
   }
-};
+}
