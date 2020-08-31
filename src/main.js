@@ -3,6 +3,7 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import axios from "axios";
+import './css/reset.css'
 Vue.prototype.http = axios;
 Vue.config.productionTip = false;
 /*第一层if判断生产环境和开发环境*/

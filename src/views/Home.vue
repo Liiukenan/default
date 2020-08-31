@@ -1,17 +1,16 @@
 <template>
   <div class="home">
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <Customer />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-
+import Customer from "@/components/Customer.vue";
 export default {
   name: "home",
   components: {
-    HelloWorld
+    Customer
   },
   mounted() {
     let data={
@@ -22,7 +21,6 @@ export default {
       method: "post",
       url: "/addpost",
       data:JSON.stringify(data)
-      
     }).then(res=>{
       console.log(res)
     });
